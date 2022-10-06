@@ -13,12 +13,12 @@ let randColor = () => {
 [@react.component]
 let make = () => {
     let numbers = [|1, 2, 3, 4, 5, 6, 7, 8, 9|];
-    let red = Js.Math.random_int(0, 255);
-    let green = Js.Math.random_int(0, 255);
-    let blue = Js.Math.random_int(0, 255);
-    let rHex = Js.String2.make(red);
-    let gHex = Js.String2.make(green);
-    let bHex = Js.String2.make(blue);
+    // let red = Js.Math.random_int(0, 255);
+    // let green = Js.Math.random_int(0, 255);
+    // let blue = Js.Math.random_int(0, 255);
+    // let rHex = Js.String2.make(red);
+    // let gHex = Js.String2.make(green);
+    // let bHex = Js.String2.make(blue);
     let listRects = Belt.Array.mapWithIndex(numbers, (index, number) => {
         <div style=(
             ReactDOM.Style.make(
