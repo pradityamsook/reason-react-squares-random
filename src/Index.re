@@ -1,27 +1,27 @@
 // Entry point
 
-[@bs.val] external document: Js.t({..}) = "document";
+// [@bs.val] external document: Js.t({..}) = "document";
 
 // We're using raw DOM manipulations here, to avoid making you read
 // ReasonReact when you might precisely be trying to learn it for the first
 // time through the examples later.
 
-let style = document##createElement("style");
-document##head##appendChild(style);
-style##innerHTML #= ExampleStyles.style;
+// let style = document##createElement("style");
+// document##head##appendChild(style);
+// style##innerHTML #= ExampleStyles.style;
 
-let makeContainer = () => {
-  let container = document##createElement("div");
-  container##className #= "container";
+// let makeContainer = () => {
+//   let container = document##createElement("div");
+//   container##className #= "container";
 
-  let content = document##createElement("div");
-  content##className #= "child";
+//   let content = document##createElement("div");
+//   content##className #= "child";
 
-  let () = container##appendChild(content);
-  let () = document##body##appendChild(container);
+//   let () = container##appendChild(content);
+//   let () = document##body##appendChild(container);
 
-  content;
-};
+//   content;
+// };
 
 // // All 4 examples.
 // ReactDOMRe.render(
@@ -45,10 +45,12 @@ let makeContainer = () => {
 //   <ReasonUsingJSUsingReason />,
 //   makeContainer("Reason Using JS Using Reason"),
 // );
-ReactDOMRe.render(
-  <NameHunter name={"Pradist"} />, makeContainer()
-)
+ReactDOMRe.renderToElementWithId(<App />, "root");
 
-ReactDOMRe.render(
-  <RectsRandomColors />, makeContainer()
-)
+// ReactDOMRe.render(
+//   <NameHunter name={"Pradist"} />, makeContainer()
+// )
+
+// ReactDOMRe.render(
+//   <RectsRandomColors />, makeContainer()
+// )

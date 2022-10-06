@@ -1,5 +1,4 @@
-// %raw("import './rects.css'");
-
+// [%bs.raw {|require('rects.css')|}];
 
 let randColor = () => {
     let red = Js.Math.random_int(255, 0);
