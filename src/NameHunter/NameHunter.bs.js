@@ -1,6 +1,6 @@
+'use strict';
 
-
-import * as React from "react";
+var React = require("react");
 
 function NameHunter(Props) {
   var name = Props.name;
@@ -9,8 +9,5 @@ function NameHunter(Props) {
 
 var make = NameHunter;
 
-export {
-  make ,
-  
-}
+exports.make = make;
 /* react Not a pure module */

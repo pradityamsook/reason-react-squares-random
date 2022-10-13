@@ -1,8 +1,8 @@
+'use strict';
 
-
-import * as React from "react";
-import * as Js_math from "bs-platform/lib/es6/js_math.js";
-import * as Belt_Array from "bs-platform/lib/es6/belt_Array.js";
+var React = require("react");
+var Js_math = require("bs-platform/lib/js/js_math.js");
+var Belt_Array = require("bs-platform/lib/js/belt_Array.js");
 
 function randColor(param) {
   var red = Js_math.random_int(0, 255);
@@ -45,9 +45,6 @@ function RectsRandomColors(Props) {
 
 var make = RectsRandomColors;
 
-export {
-  randColor ,
-  make ,
-  
-}
+exports.randColor = randColor;
+exports.make = make;
 /* react Not a pure module */

@@ -1,6 +1,6 @@
+'use strict';
 
-
-import * as React from "react";
+var React = require("react");
 
 function ReasonReactCard(Props) {
   var style = Props.style;
@@ -11,8 +11,5 @@ function ReasonReactCard(Props) {
 
 var make = ReasonReactCard;
 
-export {
-  make ,
-  
-}
+exports.make = make;
 /* react Not a pure module */
