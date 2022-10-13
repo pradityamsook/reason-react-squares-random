@@ -5,12 +5,12 @@ var Js_math = require("bs-platform/lib/js/js_math.js");
 var Belt_Array = require("bs-platform/lib/js/belt_Array.js");
 
 function randColor(param) {
-  var red = Js_math.random_int(255, 0);
-  var green = Js_math.random_int(255, 0);
-  var blue = Js_math.random_int(255, 0);
-  var rHex = String(red);
-  var gHex = String(green);
-  var bHex = String(blue);
+  var red = Js_math.random_int(0, 255);
+  var green = Js_math.random_int(0, 255);
+  var blue = Js_math.random_int(0, 255);
+  var rHex = red.toString(16);
+  var gHex = green.toString(16);
+  var bHex = blue.toString(16);
   return "#" + (rHex + (gHex + bHex));
 }
 
@@ -26,12 +26,6 @@ function RectsRandomColors(Props) {
     8,
     9
   ];
-  var red = Js_math.random_int(0, 255);
-  var green = Js_math.random_int(0, 255);
-  var blue = Js_math.random_int(0, 255);
-  String(red);
-  String(green);
-  String(blue);
   var listRects = Belt_Array.mapWithIndex(numbers, (function (index, number) {
           return React.createElement("div", {
                       key: String(index),

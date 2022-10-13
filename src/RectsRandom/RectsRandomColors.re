@@ -1,24 +1,18 @@
 // [%bs.raw {|require('rects.css')|}];
 
 let randColor = () => {
-    let red = Js.Math.random_int(255, 0);
-    let green = Js.Math.random_int(255, 0);
-    let blue = Js.Math.random_int(255, 0);
-    let rHex = Js.String2.make(red);
-    let gHex = Js.String2.make(green);
-    let bHex = Js.String2.make(blue);
+    let red = Js.Math.random_int(0, 255);
+    let green = Js.Math.random_int(0, 255);
+    let blue = Js.Math.random_int(0, 255);
+    let rHex = Js.Int.toStringWithRadix(red, ~radix=16);
+    let gHex = Js.Int.toStringWithRadix(green, ~radix=16);
+    let bHex = Js.Int.toStringWithRadix(blue, ~radix=16);
     "#" ++ rHex ++ gHex ++ bHex;
 };
 
 [@react.component]
 let make = () => {
     let numbers = [|1, 2, 3, 4, 5, 6, 7, 8, 9|];
-    // let red = Js.Math.random_int(0, 255);
-    // let green = Js.Math.random_int(0, 255);
-    // let blue = Js.Math.random_int(0, 255);
-    // let rHex = Js.String2.make(red);
-    // let gHex = Js.String2.make(green);
-    // let bHex = Js.String2.make(blue);
     let listRects = Belt.Array.mapWithIndex(numbers, (index, number) => {
         <div style=(
             ReactDOM.Style.make(
