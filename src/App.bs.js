@@ -1,8 +1,8 @@
-'use strict';
 
-var React = require("react");
-var NameHunter$RectsRandomColor = require("./NameHunter/NameHunter.bs.js");
-var RectsRandomColors$RectsRandomColor = require("./RectsRandom/RectsRandomColors.bs.js");
+
+import * as React from "react";
+import * as NameHunter$RectsRandomColor from "./NameHunter/NameHunter.bs.js";
+import * as RectsRandomColors$RectsRandomColor from "./RectsRandom/RectsRandomColors.bs.js";
 
 function App(Props) {
   return React.createElement("div", undefined, React.createElement(NameHunter$RectsRandomColor.make, {
@@ -18,5 +18,8 @@ function App(Props) {
 
 var make = App;
 
-exports.make = make;
+export {
+  make ,
+  
+}
 /* react Not a pure module */
