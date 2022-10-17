@@ -18,7 +18,7 @@ let make = () => {
             ReactDOM.Style.make(
                 ~width="100px",
                 ~height="100px",
-                ~marginTop="10px",
+                ~marginTop="25px",
                 ~border={"1px solid black"},
                 ~backgroundColor={randColor()}
                 ,()

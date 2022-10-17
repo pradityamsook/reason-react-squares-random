@@ -1,4 +1,4 @@
 [@react.component]
 let make = (~name) => {
-    <div>{React.string("Name :" ++ name)}</div>
+    <div className="border-h1">{React.string("Name : " ++ name)}</div>
 }

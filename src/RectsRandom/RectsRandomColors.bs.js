@@ -33,7 +33,7 @@ function RectsRandomColors(Props) {
                         backgroundColor: randColor(undefined),
                         border: "1px solid black",
                         height: "100px",
-                        marginTop: "10px",
+                        marginTop: "25px",
                         width: "100px"
                       }
                     }, String(number));
